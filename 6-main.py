@@ -1,5 +1,18 @@
 #!/usr/bin/python3
-print_sorted_dictionary = __import__('6-print_sorted_dictionary').print_sorted_dictionary
+Square = __import__('6-square').Square
 
-a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
-print_sorted_dictionary(a_dictionary)
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
+

@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-only_diff_elements = __import__('4-only_diff_elements').only_diff_elements
+Square = __import__('4-square').Square
 
-set_1 = { "Python", "C", "Javascript" }
-set_2 = { "Bash", "C", "Ruby", "Perl" }
-od_set = only_diff_elements(set_1, set_2)
-print(sorted(list(od_set)))
+my_square = Square(89)
+print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+
+my_square.size = 3
+print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+
+try:
+    my_square.size = "5 feet"
+    print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+except Exception as e:
+    print(e)
